@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AAF70BC45B67996F442E764 /* Pods_gitparser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7451F1ED4F91C4C9E2440DC /* Pods_gitparser.framework */; };
 		6EC2A6E71FEFC91B0082E380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */; };
 		6EC2A6EE1FEFC91B0082E380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */; };
 		6EC2A6F11FEFC91B0082E380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A6EF1FEFC91B0082E380 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301835818E437DD6BFCA70F8 /* Pods-gitparser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitparser.release.xcconfig"; path = "Pods/Target Support Files/Pods-gitparser/Pods-gitparser.release.xcconfig"; sourceTree = "<group>"; };
 		6EC2A6E31FEFC91B0082E380 /* gitparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		6EC2A7051FEFCC4A0082E380 /* MDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUser.swift; sourceTree = "<group>"; };
 		6EC2A7091FEFCCD90082E380 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		6EC2A70B1FEFCCF40082E380 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		C1048E56E60F8C5C14A8E7BD /* Pods-gitparser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitparser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gitparser/Pods-gitparser.debug.xcconfig"; sourceTree = "<group>"; };
+		C7451F1ED4F91C4C9E2440DC /* Pods_gitparser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gitparser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAF70BC45B67996F442E764 /* Pods_gitparser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10682BEF8F49C38A9AFE4050 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1048E56E60F8C5C14A8E7BD /* Pods-gitparser.debug.xcconfig */,
+				301835818E437DD6BFCA70F8 /* Pods-gitparser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6EC2A6DA1FEFC91B0082E380 = {
 			isa = PBXGroup;
 			children = (
 				6EC2A6E51FEFC91B0082E380 /* gitparser */,
 				6EC2A6E41FEFC91B0082E380 /* Products */,
+				10682BEF8F49C38A9AFE4050 /* Pods */,
+				A29E154D296C1956F4A41EDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +164,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A29E154D296C1956F4A41EDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7451F1ED4F91C4C9E2440DC /* Pods_gitparser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EC2A6F51FEFC91B0082E380 /* Build configuration list for PBXNativeTarget "gitparser" */;
 			buildPhases = (
+				E212411D95F3481774C98C8A /* [CP] Check Pods Manifest.lock */,
 				6EC2A6DF1FEFC91B0082E380 /* Sources */,
 				6EC2A6E01FEFC91B0082E380 /* Frameworks */,
 				6EC2A6E11FEFC91B0082E380 /* Resources */,
+				128BD1D97D37DECB4C6CFF15 /* [CP] Embed Pods Frameworks */,
+				671B284CF5218FA918BE3517 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +242,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		128BD1D97D37DECB4C6CFF15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gitparser/Pods-gitparser-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gitparser/Pods-gitparser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		671B284CF5218FA918BE3517 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gitparser/Pods-gitparser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E212411D95F3481774C98C8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gitparser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EC2A6DF1FEFC91B0082E380 /* Sources */ = {
@@ -352,6 +445,7 @@
 		};
 		6EC2A6F61FEFC91B0082E380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1048E56E60F8C5C14A8E7BD /* Pods-gitparser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -368,6 +462,7 @@
 		};
 		6EC2A6F71FEFC91B0082E380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 301835818E437DD6BFCA70F8 /* Pods-gitparser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
