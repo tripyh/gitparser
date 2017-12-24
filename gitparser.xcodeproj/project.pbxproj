@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6EC2A6E71FEFC91B0082E380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */; };
-		6EC2A6E91FEFC91B0082E380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A6E81FEFC91B0082E380 /* ViewController.swift */; };
-		6EC2A6EC1FEFC91B0082E380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A6EA1FEFC91B0082E380 /* Main.storyboard */; };
 		6EC2A6EE1FEFC91B0082E380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */; };
 		6EC2A6F11FEFC91B0082E380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A6EF1FEFC91B0082E380 /* LaunchScreen.storyboard */; };
+		6EC2A6FE1FEFCA7A0082E380 /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A6FD1FEFCA7A0082E380 /* UserListController.swift */; };
+		6EC2A7001FEFCA9C0082E380 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A6FF1FEFCA9C0082E380 /* UserListViewModel.swift */; };
+		6EC2A7021FEFCAB60082E380 /* UserListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A7011FEFCAB60082E380 /* UserListController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EC2A6E31FEFC91B0082E380 /* gitparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EC2A6E81FEFC91B0082E380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6EC2A6EB1FEFC91B0082E380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EC2A6F01FEFC91B0082E380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EC2A6F21FEFC91B0082E380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC2A6FD1FEFCA7A0082E380 /* UserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
+		6EC2A6FF1FEFCA9C0082E380 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		6EC2A7011FEFCAB60082E380 /* UserListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,54 @@
 			isa = PBXGroup;
 			children = (
 				6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */,
-				6EC2A6E81FEFC91B0082E380 /* ViewController.swift */,
-				6EC2A6EA1FEFC91B0082E380 /* Main.storyboard */,
-				6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */,
-				6EC2A6EF1FEFC91B0082E380 /* LaunchScreen.storyboard */,
 				6EC2A6F21FEFC91B0082E380 /* Info.plist */,
+				6EC2A6FA1FEFCA290082E380 /* Images */,
+				6EC2A6F91FEFCA230082E380 /* Classes */,
+				6EC2A6F81FEFCA1B0082E380 /* Controllers */,
+				6EC2A6FB1FEFCA2F0082E380 /* Storyboards */,
 			);
 			path = gitparser;
+			sourceTree = "<group>";
+		};
+		6EC2A6F81FEFCA1B0082E380 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A6FC1FEFCA660082E380 /* UserList */,
+				6EC2A6FD1FEFCA7A0082E380 /* UserListController.swift */,
+				6EC2A7011FEFCAB60082E380 /* UserListController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6EC2A6F91FEFCA230082E380 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6EC2A6FA1FEFCA290082E380 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A6ED1FEFC91B0082E380 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6EC2A6FB1FEFCA2F0082E380 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A6EF1FEFC91B0082E380 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6EC2A6FC1FEFCA660082E380 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A6FF1FEFCA9C0082E380 /* UserListViewModel.swift */,
+			);
+			path = UserList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +168,7 @@
 			files = (
 				6EC2A6F11FEFC91B0082E380 /* LaunchScreen.storyboard in Resources */,
 				6EC2A6EE1FEFC91B0082E380 /* Assets.xcassets in Resources */,
-				6EC2A6EC1FEFC91B0082E380 /* Main.storyboard in Resources */,
+				6EC2A7021FEFCAB60082E380 /* UserListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC2A6E91FEFC91B0082E380 /* ViewController.swift in Sources */,
+				6EC2A6FE1FEFCA7A0082E380 /* UserListController.swift in Sources */,
+				6EC2A7001FEFCA9C0082E380 /* UserListViewModel.swift in Sources */,
 				6EC2A6E71FEFC91B0082E380 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +188,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6EC2A6EA1FEFC91B0082E380 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6EC2A6EB1FEFC91B0082E380 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6EC2A6EF1FEFC91B0082E380 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
