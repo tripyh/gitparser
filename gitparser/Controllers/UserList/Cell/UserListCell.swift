@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class UserListCell: UITableViewCell {
     static var reuseIdentifier: String {
@@ -15,7 +16,16 @@ class UserListCell: UITableViewCell {
     
     var user: MDUser? {
         didSet {
+            loginLabel.text = user?.login
             
+            if let validId = user?.id {
+                idLabel.text = String(validId)
+            }
+            
+            if let validLink = user?.avatarUrl,
+                let validUrl = URL(string: validLink) {
+                avatarImage.af_setImage(withURL: validUrl)
+            }
         }
     }
     
@@ -28,5 +38,8 @@ class UserListCell: UITableViewCell {
         
         loginLabel.text = nil
         idLabel.text = nil
+        avatarImage.af_cancelImageRequest()
+        avatarImage.layer.removeAllAnimations()
+        avatarImage.image = nil
     }
 }

@@ -17,6 +17,13 @@
 		6EC2A7061FEFCC4A0082E380 /* MDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7051FEFCC4A0082E380 /* MDUser.swift */; };
 		6EC2A70A1FEFCCD90082E380 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7091FEFCCD90082E380 /* UserListCell.swift */; };
 		6EC2A70C1FEFCCF40082E380 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A70B1FEFCCF40082E380 /* UserListCell.xib */; };
+		6EC2A70F1FEFD0B20082E380 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A70E1FEFD0B20082E380 /* UserService.swift */; };
+		6EC2A7121FEFD0F20082E380 /* Config+Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7111FEFD0F20082E380 /* Config+Server.swift */; };
+		6EC2A7141FEFD11B0082E380 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7131FEFD11B0082E380 /* NetworkProvider.swift */; };
+		6EC2A7181FEFD2310082E380 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7171FEFD2310082E380 /* UserDetailViewModel.swift */; };
+		6EC2A71A1FEFD23F0082E380 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7191FEFD23F0082E380 /* UserDetailController.swift */; };
+		6EC2A71E1FEFD3700082E380 /* UserDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC2A71D1FEFD3700082E380 /* UserDetailController.xib */; };
+		6EC2A7211FEFD4B10082E380 /* Reactive+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC2A7201FEFD4B10082E380 /* Reactive+UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		6EC2A7051FEFCC4A0082E380 /* MDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUser.swift; sourceTree = "<group>"; };
 		6EC2A7091FEFCCD90082E380 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		6EC2A70B1FEFCCF40082E380 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		6EC2A70E1FEFD0B20082E380 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		6EC2A7111FEFD0F20082E380 /* Config+Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+Server.swift"; sourceTree = "<group>"; };
+		6EC2A7131FEFD11B0082E380 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		6EC2A7171FEFD2310082E380 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		6EC2A7191FEFD23F0082E380 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
+		6EC2A71D1FEFD3700082E380 /* UserDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailController.xib; sourceTree = "<group>"; };
+		6EC2A7201FEFD4B10082E380 /* Reactive+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UINavigationController.swift"; sourceTree = "<group>"; };
 		C1048E56E60F8C5C14A8E7BD /* Pods-gitparser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gitparser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gitparser/Pods-gitparser.debug.xcconfig"; sourceTree = "<group>"; };
 		C7451F1ED4F91C4C9E2440DC /* Pods_gitparser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gitparser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,10 +94,12 @@
 			children = (
 				6EC2A6E61FEFC91B0082E380 /* AppDelegate.swift */,
 				6EC2A6F21FEFC91B0082E380 /* Info.plist */,
-				6EC2A6FA1FEFCA290082E380 /* Images */,
 				6EC2A6F91FEFCA230082E380 /* Classes */,
+				6EC2A7101FEFD0C40082E380 /* Config */,
 				6EC2A6F81FEFCA1B0082E380 /* Controllers */,
+				6EC2A6FA1FEFCA290082E380 /* Images */,
 				6EC2A6FB1FEFCA2F0082E380 /* Storyboards */,
+				6EC2A71F1FEFD4990082E380 /* Utils */,
 			);
 			path = gitparser;
 			sourceTree = "<group>";
@@ -91,6 +107,7 @@
 		6EC2A6F81FEFCA1B0082E380 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6EC2A7151FEFD21B0082E380 /* UserDetail */,
 				6EC2A6FC1FEFCA660082E380 /* UserList */,
 			);
 			path = Controllers;
@@ -134,7 +151,9 @@
 		6EC2A7031FEFCC2D0082E380 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				6EC2A70D1FEFD0A10082E380 /* Services */,
 				6EC2A7041FEFCC3D0082E380 /* Models */,
+				6EC2A7131FEFD11B0082E380 /* NetworkProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,6 +181,48 @@
 				6EC2A70B1FEFCCF40082E380 /* UserListCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		6EC2A70D1FEFD0A10082E380 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A70E1FEFD0B20082E380 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6EC2A7101FEFD0C40082E380 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A7111FEFD0F20082E380 /* Config+Server.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6EC2A7151FEFD21B0082E380 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A7161FEFD2220082E380 /* ViewModel */,
+				6EC2A7191FEFD23F0082E380 /* UserDetailController.swift */,
+				6EC2A71D1FEFD3700082E380 /* UserDetailController.xib */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		6EC2A7161FEFD2220082E380 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A7171FEFD2310082E380 /* UserDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6EC2A71F1FEFD4990082E380 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6EC2A7201FEFD4B10082E380 /* Reactive+UINavigationController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A29E154D296C1956F4A41EDE /* Frameworks */ = {
@@ -235,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC2A70C1FEFCCF40082E380 /* UserListCell.xib in Resources */,
+				6EC2A71E1FEFD3700082E380 /* UserDetailController.xib in Resources */,
 				6EC2A6F11FEFC91B0082E380 /* LaunchScreen.storyboard in Resources */,
 				6EC2A6EE1FEFC91B0082E380 /* Assets.xcassets in Resources */,
 				6EC2A7021FEFCAB60082E380 /* UserListController.xib in Resources */,
@@ -314,9 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC2A7181FEFD2310082E380 /* UserDetailViewModel.swift in Sources */,
+				6EC2A7121FEFD0F20082E380 /* Config+Server.swift in Sources */,
 				6EC2A70A1FEFCCD90082E380 /* UserListCell.swift in Sources */,
+				6EC2A71A1FEFD23F0082E380 /* UserDetailController.swift in Sources */,
 				6EC2A6FE1FEFCA7A0082E380 /* UserListController.swift in Sources */,
+				6EC2A70F1FEFD0B20082E380 /* UserService.swift in Sources */,
+				6EC2A7211FEFD4B10082E380 /* Reactive+UINavigationController.swift in Sources */,
 				6EC2A7001FEFCA9C0082E380 /* UserListViewModel.swift in Sources */,
+				6EC2A7141FEFD11B0082E380 /* NetworkProvider.swift in Sources */,
 				6EC2A6E71FEFC91B0082E380 /* AppDelegate.swift in Sources */,
 				6EC2A7061FEFCC4A0082E380 /* MDUser.swift in Sources */,
 			);
