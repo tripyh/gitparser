@@ -21,14 +21,14 @@ class UserListViewModel: NSObject {
     
     // MARK: Private properties
     private var users: [MDUser] = []
-    private let provider: NetworkProvider<UserService>
+    private let provider: MoyaProvider<UserService>
     private let reloadObserver: Signal<(), NoError>.Observer
     private let showErrorObserver: Signal<String, NoError>.Observer
     private let _loading: MutableProperty<Bool> = MutableProperty(false)
     private let pushControllerObserver: Signal<UIViewController, NoError>.Observer
     
     // MARK: Lifecycle
-    init(provider: NetworkProvider<UserService> = NetworkProvider<UserService>()) {
+    init(provider: MoyaProvider<UserService> = MoyaProvider<UserService>()) {
         self.provider = provider
         (reload, reloadObserver) = Signal.pipe()
         (pushController, pushControllerObserver) = Signal.pipe()
@@ -42,7 +42,7 @@ class UserListViewModel: NSObject {
 extension UserListViewModel {
     func loadUsers() {
         _loading.value = true
-        provider.request(.contributors).start { [weak self] event in
+        provider.reactive.request(.contributors).start { [weak self] event in
             switch event {
             case let .value(response):
                 do {

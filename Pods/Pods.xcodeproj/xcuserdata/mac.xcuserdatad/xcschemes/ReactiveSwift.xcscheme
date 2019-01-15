@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5EE90B2AE88D6DA8305A4E12CF93ED1B'
-               BlueprintName = 'Moya'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Moya.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA1EFC38173EFDEAEA04B8DDA9DA4D67"
+               BlueprintName = "ReactiveSwift"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "ReactiveSwift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
