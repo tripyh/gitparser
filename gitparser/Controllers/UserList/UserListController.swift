@@ -48,9 +48,7 @@ class UserListController: UIViewController {
 private extension UserListController {
     func configure() {
         navigationItem.title = "Contributors"
-        tableView.register(UINib(nibName: "UserListCell", bundle: nil),
-                           forCellReuseIdentifier: UserListCell.reuseIdentifier)
-        
+        tableView.register(UserListCell.self)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshTable),
                                  for: UIControlEvents.valueChanged)
@@ -93,8 +91,7 @@ extension UserListController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserListCell.reuseIdentifier,
-                                                 for: indexPath) as! UserListCell
+        let cell: UserListCell = tableView.dequeueReusableCell(for: indexPath)
         cell.user = viewModel.user(at: indexPath.row)
         return cell
     }

@@ -9,11 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class UserListCell: UITableViewCell {
-    static var reuseIdentifier: String {
-        return NSStringFromClass(self)
-    }
-    
+class UserListCell: BaseTableViewCell {
     var user: MDUser? {
         didSet {
             loginLabel.text = user?.login

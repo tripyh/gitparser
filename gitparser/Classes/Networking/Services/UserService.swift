@@ -18,17 +18,6 @@ enum UserService: NetworkTarget {
     var method: Moya.Method {
         return .get
     }
-    
-    var parameters: [String: Any]? {
-        switch self {
-        case .contributors:
-            return nil
-        }
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
-    }
 }
 
 
